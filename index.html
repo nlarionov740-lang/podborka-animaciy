@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Анимации для стройки</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&family=Unbounded:wght@500;700&display=swap">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0}
+img{max-width:100%}
+/* Лист подбора: разделы идут в порядке страниц будущего сайта, номер нужен для ответа */
+:root {
+  --bg:#e9e7e1; --panel:#f8f7f3; --fg:#23262a; --muted:#5d6166; --line:#cfccc3;
+  --accent:#b34a00; --on-accent:#fff; --shot:#ffffff;
+  --display:"Unbounded","Golos Text",system-ui,sans-serif; --body:"Golos Text",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg:#191b1d; --panel:#24272a; --fg:#ecebe6; --muted:#a9acae; --line:#3a3e42;
+  --accent:#ff9d4d; --on-accent:#1b1208; --shot:#f4f3ef; color-scheme:dark; } }
+:root[data-theme="dark"] {
+  --bg:#191b1d; --panel:#24272a; --fg:#ecebe6; --muted:#a9acae; --line:#3a3e42;
+  --accent:#ff9d4d; --on-accent:#1b1208; --shot:#f4f3ef; color-scheme:dark; }
+body { background:var(--bg); color:var(--fg); font:400 16px/1.5 var(--body); }
+.wrap { max-width:1080px; margin:0 auto; padding-block:32px 56px;
+  padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); display:grid; gap:36px; }
+h1,h2 { font-family:var(--display); font-weight:700; text-wrap:balance; margin:0; }
+h1 { font-size:clamp(26px,5vw,42px); line-height:1.15; }
+h2 { font-size:20px; padding-bottom:10px; border-bottom:2px solid var(--fg); margin-bottom:18px; }
+h3 { font-size:18px; margin:0; font-weight:700; overflow-wrap:anywhere; }
+p { margin:0; }
+header { display:grid; gap:12px; }
+header p { max-width:65ch; color:var(--muted); }
+.set { background:var(--panel); border-left:5px solid var(--accent); padding:16px 18px; display:grid; gap:6px; }
+.set b { font-family:var(--display); font-size:15px; font-weight:500; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr)); gap:18px; }
+.card { background:var(--panel); display:flex; flex-direction:column; min-width:0; }
+.shot { background:var(--shot); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; }
+.shot img { width:100%; height:100%; object-fit:contain; display:block; }
+.body { padding:14px 16px 18px; display:flex; flex-direction:column; gap:8px; flex:1; min-width:0; }
+.head { display:flex; align-items:center; justify-content:space-between; gap:8px; min-height:24px; }
+.num { font-family:var(--display); font-weight:700; font-size:15px; color:var(--accent); white-space:nowrap; }
+.pick { background:var(--accent); color:var(--on-accent); font-size:13px; font-weight:500; padding:2px 8px; }
+.use { color:var(--muted); } .use b { color:var(--fg); }
+a { color:var(--accent); font-weight:500; text-underline-offset:3px; }
+a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.body > a { margin-top:auto; padding-top:6px; }
+.list { list-style:none; padding:0; margin:0; display:grid; gap:14px; }
+.list li { display:flex; gap:14px; align-items:baseline; } .list li > div { min-width:0; }
+.list p, .skip { color:var(--muted); }
+.skip { margin:0; padding-left:20px; display:grid; gap:8px; } .skip b { color:var(--fg); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Анимации для сайта строительной компании</h1>
+    <p>Из 12 тысяч компонентов 21st.dev отобрал то, что работает на реальных фото объектов. Большая часть каталога сделана для IT-продуктов, поэтому подошло немного.</p>
+    <p>Картинки здесь неподвижные, это превью из каталога. Движение смотри по ссылке «Посмотреть вживую». Английские тексты и чужие фото в демо заменим на наши.</p>
+  </header>
+  <div class="set"><b>С чего бы я начал: №1, №4, №6, №7, №9 и этапы работ №10</b><p>Напиши номера, которые нравятся. Необязательно копировать код: эффекты я соберу в нашем стиле.</p></div>
+  <section><h2>Первый экран</h2><div class="grid"><article class="card">
+  <div class="shot"><img src="https://cdn.21st.dev/cdn-cgi/image/fit=scale-down,width=640,quality=75,format=webp/https://cdn.21st.dev/arunachalam/scroll-expansion-hero/default/preview.1788803090804-2c8fb1d2-2c97-49da-8b80-56ad608613d9.webp" alt="Превью компонента Scroll media expansion hero из каталога 21st.dev" loading="lazy"></div>
+  <div class="body">
+    <div class="head"><span class="num">№1</span><span class="pick">Мой выбор</span></div>
+    <h3>Scroll media expansion hero</h3>
+    <p>Фото или видео в небольшой рамке при прокрутке раскрывается на весь экран.</p>
+    <p class="use"><b>У нас:</b> Съёмка объекта с дрона: посетитель крутит страницу и как будто подлетает к стройке.</p>
+    <a href="https://21st.dev/@arunachalam/components/scroll-expansion-hero" target="_blank" rel="noopener">Посмотреть вживую</a>
+  </div>
+</article><article class="card">
+  <div class="shot"><img src="https://cdn.21st.dev/cdn-cgi/image/fit=scale-down,width=640,quality=75,format=webp/https://cdn.21st.dev/larsen66/parallax-scrolling/default/preview.1753957121379.png" alt="Превью компонента Parallax Scrolling из каталога 21st.dev" loading="lazy"></div>
+  <div class="body">
+    <div class="head"><span class="num">№2</span></div>
+    <h3>Parallax Scrolling</h3>
+    <p>Слои картинки движутся с разной скоростью, а крупное слово стоит между ними.</p>
+    <p class="use"><b>У нас:</b> Название компании за силуэтом здания или крана. Нужно фото, где здание вырезано отдельным слоем.</p>
+    <a href="https://21st.dev/@osmosupply/components/parallax-scrolling" target="_blank" rel="noopener">Посмотреть вживую</a>
+  </div>
+</article><article class="card">
+  <div class="shot"><img src="https://cdn.21st.dev/cdn-cgi/image/fit=scale-down,width=640,quality=75,format=webp/https://cdn.21st.dev/user_2rQ1QHrJyxpmWMHhqhANzWMc64n/background-paths/default/preview.png?v=1" alt="Превью компонента Background Paths из каталога 21st.dev" loading="lazy"></div>
+  <div class="body">
+    <div class="head"><span class="num">№3</span></div>
+    <h3>Background Paths</h3>
+    <p>Фон из тонких плавных линий.</p>
+    <p class="use"><b>У нас:</b> Запасной первый экран, если пока нет хорошего фото. Линии можно сделать похожими на чертёж.</p>
+    <a href="https://21st.dev/@kokonutd/components/background-paths" target="_blank" rel="noopener">Посмотреть вживую</a>
+  </div>
+</article></div></section><section><h2>Объекты</h2><div class="grid"><article class="card">
+  <div class="shot"><img src="https://cdn.21st.dev/cdn-cgi/image/fit=scale-down,width=640,quality=75,format=webp/https://cdn.21st.dev/ziegfiroyt/reveal1/default/preview.1783715607677.png" alt="Превью компонента Before/After Image Slider из каталога 21st.dev" loading="lazy"></div>
+  <div class="body">
+    <div class="head"><span class="num">№4</span><span class="pick">Мой выбор</span></div>
+    <h3>Before/After Image Slider</h3>
+    <p>Разделитель тянется пальцем и показывает снимок «до» и снимок «после».</p>
+    <p class="use"><b>У нас:</b> Было и стало на одном объекте: котлован и готовое здание, старый фасад и новый. Самый убедительный блок для стройки.</p>
+    <a href="https://21st.dev/@ziegfiroyt/components/reveal1" target="_blank" rel="noopener">Посмотреть вживую</a>
+  </div>
+</article><article class="card">
+  <div class="shot"><img src="https://cdn.21st.dev/cdn-cgi/image/fit=scale-down,width=640,quality=75,format=webp/https://cdn.21st.dev/user_2tWTE0rCrloVAVylFPYfp10xU92/zoom-parallax/default/preview.1788462332485.png" alt="Превью компонента Zoom Parallax из каталога 21st.dev" loading="lazy"></div>
+  <div class="body">
+    <div class="head"><span class="num">№5</span></div>
+    <h3>Zoom Parallax</h3>
+    <p>Группа фотографий при прокрутке увеличивается, пока одна не займёт весь экран.</p>
+    <p class="use"><b>У нас:</b> Подборка объектов. Нужно 5–7 сильных фото одного качества.</p>
+    <a href="https://21st.dev/@efferd/components/zoom-parallax" target="_blank" rel="noopener">Посмотреть вживую</a>
+  </div>
+</article></div></section><section><h2>Услуги</h2><div class="grid"><article class="card">
+  <div class="shot"><img src="https://cdn.21st.dev/cdn-cgi/image/fit=scale-down,width=640,quality=75,format=webp/https://cdn.21st.dev/minhxthanh/interactive-image-accordion/default/preview.1788797504559-62bd40d7-a17f-42ed-8d25-fbea892998fc.png" alt="Превью компонента Interactive Image Accordion из каталога 21st.dev" loading="lazy"></div>
+  <div class="body">
+    <div class="head"><span class="num">№6</span><span class="pick">Мой выбор</span></div>
+    <h3>Interactive Image Accordion</h3>
+    <p>Узкие вертикальные фото, активное раскрывается и показывает подпись.</p>
+    <p class="use"><b>У нас:</b> Направления работ: монолит, кладка, кровля, фасады, отделка. На телефоне раскрывать будем нажатием.</p>
+    <a href="https://21st.dev/@minhxthanh/components/interactive-image-accordion" target="_blank" rel="noopener">Посмотреть вживую</a>
+  </div>
+</article></div></section><section><h2>Доверие</h2><div class="grid"><article class="card">
+  <div class="shot"><img src="https://cdn.21st.dev/cdn-cgi/image/fit=scale-down,width=640,quality=75,format=webp/https://cdn.21st.dev/meschacirung/stats/default/preview.1785191202349-a0d97a9a-33b7-4e87-a8e5-4c1951689142.png" alt="Превью компонента Stats из каталога 21st.dev" loading="lazy"></div>
+  <div class="body">
+    <div class="head"><span class="num">№7</span><span class="pick">Мой выбор</span></div>
+    <h3>Stats</h3>
+    <p>Строгий блок с тремя показателями. На этом превью цифры стоят на месте, счёт добавляется отдельно.</p>
+    <p class="use"><b>У нас:</b> Сданные объекты, квадратные метры, годы работы. Только настоящие цифры компании.</p>
+    <a href="https://21st.dev/@meschacirung/components/stats" target="_blank" rel="noopener">Посмотреть вживую</a>
+  </div>
+</article><article class="card">
+  <div class="shot"><img src="https://cdn.21st.dev/cdn-cgi/image/fit=scale-down,width=640,quality=75,format=webp/https://cdn.21st.dev/user_tommyjepsen/cases-with-infinite-scroll/928/preview.png" alt="Превью компонента Cases with Infinite Scroll из каталога 21st.dev" loading="lazy"></div>
+  <div class="body">
+    <div class="head"><span class="num">№8</span></div>
+    <h3>Cases with Infinite Scroll</h3>
+    <p>Лента логотипов.</p>
+    <p class="use"><b>У нас:</b> Заказчики и партнёры, если они разрешат показать свои логотипы.</p>
+    <a href="https://21st.dev/@tommyjepsen/components/cases-with-infinite-scroll" target="_blank" rel="noopener">Посмотреть вживую</a>
+  </div>
+</article></div></section><section><h2>Заявка</h2><div class="grid"><article class="card">
+  <div class="shot"><img src="https://cdn.21st.dev/cdn-cgi/image/fit=scale-down,width=640,quality=75,format=webp/https://cdn.21st.dev/shadcnspace/stepper-03/default/preview.1789988031503-2964cec8-4bb2-4737-b3a5-6b3490cc0c94.png" alt="Превью компонента Animated Progress Stepper из каталога 21st.dev" loading="lazy"></div>
+  <div class="body">
+    <div class="head"><span class="num">№9</span><span class="pick">Мой выбор</span></div>
+    <h3>Animated Progress Stepper</h3>
+    <p>Форма по шагам с индикатором прогресса.</p>
+    <p class="use"><b>У нас:</b> Заявка на расчёт: тип работ, объём, адрес, контакты. Несколько коротких шагов выглядят проще одной длинной формы.</p>
+    <a href="https://21st.dev/@shadcnspace/components/stepper-03" target="_blank" rel="noopener">Посмотреть вживую</a>
+  </div>
+</article></div></section>
+  <section><h2>Без превью: открывай по ссылке</h2><ul class="list"><li><span class="num">№10</span><div><a href="https://21st.dev/@shadcnui-blocks/components/timeline-05" target="_blank" rel="noopener">Process Timeline</a><p>Этапы работ: договор, проект, стройка, сдача.</p></div></li><li><span class="num">№11</span><div><a href="https://21st.dev/@chamaac/components/how-it-works" target="_blank" rel="noopener">How It Works</a><p>Те же этапы, только карточки закреплены и связаны между собой при прокрутке.</p></div></li><li><span class="num">№12</span><div><a href="https://21st.dev/@danielpetho/components/basic-number-ticker/analytics-stats-cards" target="_blank" rel="noopener">Number Ticker</a><p>Счёт цифр от нуля. Подойдёт к блоку №7.</p></div></li><li><span class="num">№13</span><div><a href="https://21st.dev/@hyperiux/templates/lumera-luxury-real-estate-template" target="_blank" rel="noopener">Lumera (шаблон сайта)</a><p>Целый сайт о недвижимости, можно посмотреть ритм страниц. Цену и условия не проверял.</p></div></li></ul></section>
+  <section><h2>Смотрел и не беру</h2><ul class="skip"><li><b>Aurora, Shader, Sparkles, Liquid Glass:</b> выглядят как сайт ИИ-стартапа</li><li><b>Container Scroll:</b> показывает планшет с интерфейсом программы</li><li><b>3D Parallax Unfurling Gallery:</b> наклонённая 3D-сетка, фото объектов в ней плохо читаются</li><li><b>Compare:</b> та же шторка, что №4, но демо сделано на коде</li></ul></section>
+</div>
+</body>
+</html>
